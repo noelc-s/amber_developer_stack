@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 # Find and use the system's Eigen3 library
-FIND_PACKAGE (Eigen3 3.3.0)
+FIND_PACKAGE (Eigen3 3.3.0 REQUIRED)
 
 IF (NOT EIGEN3_FOUND)
   MESSAGE (WARNING "Could not find Eigen3 on your system. Install it.")
@@ -33,7 +33,7 @@ catkin_package(
   CATKIN_DEPENDS
     common_assert
     common_cmake
-  DEPENDS Eigen3
+  DEPENDS EIGEN3
 )
 
 #############
